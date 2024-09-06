@@ -1,4 +1,4 @@
-## *Recipe for Delicious Teriyaki Chicken*
+## *Recipe for Teriyaki Chicken*
 ---
 ### **Ingredients to Get**
 - [x] Chicken Breast
