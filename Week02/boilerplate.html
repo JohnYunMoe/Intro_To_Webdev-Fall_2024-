@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- this specifies the character set encoding.
+     without this tag our fonts might not load properly -->
+    <meta charset="utf-8" />
+    <!-- the viewport tag sets the initial scale and ensures
+     proper responsive behavior -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The title tag shows up in the browser tab and as the big blue link in search results -->
+    <title>HTML Boilerplate</title>
+  </head>
+  <body>
+    <p>
+      <a href="https://www.w3schools.com/" target = "_blank"> This is testlink</a>
+      <!-- action = where to send the data from the form(e.g calculate.js or database api endpoint)-->
+       <!--  method is the way of sending, post to send data elsewhere, get to get from api -->
+      <form action = "#" method = "post" name = "sampleform" target = ""></form>
+    </p>
+    <fieldset>
+      <legend>
+        Simple Text Input
+      </legend>
+      <p>The box and titile blah blah</p>
+      <label for = "FirstName"> First Name</label>
+      <input type = "text" name = "Firstname" id = "FirstName" required/>
+
+      <label for = "LastName"> Last name</label>
+      <input type = "text" name=" Last Name " placeholder = "placeholder Name" maxlength = "15" />
+      
+      <label for = "age">Your Age</label>
+      <input type = "number" name ="agge" min = "0" max = "100" />
+
+      <label for = "password">Password</label>
+      <input type = "password" name = "password" />
+    </fieldset>
+    <fieldset>
+      <legend>
+        Text are Tag
+      </legend>
+      <p>Text Areas are for logner text answers</p>
+      <label for = "why IDM"> Why did you do IDM</label>
+      <text area name = "whyIDM" cols = "50" rows = "10"></textarea>
+      <br/>
+      <input type = "radio" name = "favorite" value = "dog"/> Dog
+      <input type = "radio" name = "" />
+      <button role = "button"> Contact Us</button> 
+
+    </fieldset>  
+  
+    <h1>Hello World!</h1>
+  </body>
+</html>
