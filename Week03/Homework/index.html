@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- this makes sure that fonts work as theyre supposed to -->
+        <meta charset="utf-8"/>
+        <!-- viewport to set initial scale and width -->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+        <!-- title tag -->
+        <title>Recipe for Teriyaki Chicken</title>
+        
+        <!-- CSS Stylesheet  -->
+        <style>
+        .main 
+        {
+            margin-left: 150px; /* Same as the width of the sidenav */
+            font-size: 28px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+                
+        /* Changing the background color of the page */
+        body
+        {
+            background-color: whitesmoke;
+        }
+        /* change font to cursive, color to peru and align heading 1 to center */
+        h1
+        {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif   ;
+            color:peru;
+            text-align: center;
+        }
+        /* change font to cursive and color to peru for all heading 3  */
+        h3,h4
+        {
+            font-family:cursive;
+            color:peru;
+        }
+        /* change font to cursive and color to remain black for all text */
+        p
+        {
+            font-family:cursive;
+            color:black;
+            font-size:medium;
+        }
+        /* change font size for the list items */
+        li
+        {
+            font-family: cursive;
+            font-size: medium;
+        }
+        /* put a border for the images and make the borders rounded with groove style */
+        img
+        {
+            border: 2px solid black;
+            border-style: groove;
+            border-radius: 15px; /* Rounded corners */
+            border-color: black;
+        }
+        label
+        {
+            font-size: medium;
+            font-family: cursive;
+        }
+        .sidenav 
+        {
+            height: 100%;
+            width: 150px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color:antiquewhite;
+            overflow-x: hidden;
+            padding-top: 50px;
+        }
+        .sidenav a 
+        {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            color: peru;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            transition: color 0.5s, background-color 0.5s;
+        }
+        .nav 
+        {
+            list-style-type: none;
+            margin: 0;
+            display: inline;
+            padding: 15px 4px 17px 0;
+            box-shadow: 0, 0, 5px rgba(0, 0, 0, 0.15);
+        }
+        .nav li
+        {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.9s;
+        }
+        .nav li:hover a
+        {
+            background-color:burlywood; 
+            color: black; 
+        }
+
+        .dropdown
+        {
+            padding: 0;
+        }
+
+        .dropdown_bar 
+        {
+            padding: 0;
+            position: absolute;
+            top: 65px; 
+            left: 0;
+            width: 150px;
+            background-color: antiquewhite;
+            box-shadow: none;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.9s;
+            z-index: 3;
+        }
+
+
+
+        .dropdown_bar li a 
+        {
+            background: #555;
+            display: block;
+            color: #fff;
+            text-shadow: 0 -1px 0 #000;
+        }
+
+        .dropdown:hover .dropdown_bar
+        {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s; 
+        }
+
+
+        .dropdown_bar li:hover a 
+        {
+            background-color: burlywood;
+            color: black;
+        }
+
+    
+        </style>
+    
+    </head>
+
+    <body>
+    <div class = "main content">
+        <!-- Description of the Dish -->
+        <h1 id="top"> John's Recipe for Delicious Teriyaki Chicken </h1>
+        <hr>
+        <div class="sidenav">
+        <ul class ="nav">
+            <li><a href="#Home">Home</a></li>
+            <li class="dropdown">
+                <a href="#Other_Recipes" class="dropbtn">Other Recipes</a>
+                <ul class = "dropdown_bar">
+                    <li><a href ="#Curry_Udon">Curry Udon</a></li>
+                    <li><a href ="#Chicken_Katsu">Chicken Katsu</a></li>
+                    <li><a href ="#Spicy_Sour_Soup">Spicy and Sour Soup</a></li>
+                </ul>
+            </li>
+            <li><a href="#About_me">About me</a></li>
+            <li><a href="#Contact_me">Contact Me</a></li>
+            <li><a href="#Cookbook">Cookbook</a></li>
+        </ul>
+        </div>
+            <img src="Images/teriyakichicken.webp"width="300px" height="250px"> 
+            <img src = "Images/Teriyaki-Chicken-plate.jpg"width="350px" height="250px">
+            <img src = "Images/k_Photo_Recipes_2024-05-chicken-teriyaki-190_chicken-teriyaki-190-171-horizontal.jpg"width="350px" height="250px"><br>
+        <p>
+            Teriyaki chicken is a popular Japanese dish that features tender, juicy chicken pieces coated in a 
+            sweet and savory glaze. The key to the dish is the teriyaki sauce, which is made from a mixture of soy 
+            sauce, mirin (a type of sweet rice wine), sugar, and sometimes ginger and garlic. The chicken is usually
+            grilled or pan-seared, allowing the sauce to caramelize and create a shiny, flavorful coating. The dish
+            is often served over steamed rice, accompanied by vegetables like broccoli or snap peas, and garnished
+            with sesame seeds or spring onions. The balance of sweet and salty flavors, combined with the rich umami
+            of the soy sauce, makes teriyaki chicken a crowd-pleaser and a staple in Japanese cuisine.
+        </p>
+
+        <!-- Checklist for the ingredients of the recipe without name and value attributes or a submit because it is 
+         not needed at this stage -->
+        <h3 id = "Title">What do you need?</h3>
+        <input type="checkbox" id = "choice1">
+        <label for="choice1">Chicken Breast</label><br>
+        <input type="checkbox" id = "choice2">
+        <label for="choice2">Soy Sauce</label><br>
+        <input type="checkbox" id = "choice3">
+        <label for="choice3">Mirin</label><br>
+        <input type="checkbox" id = "choice4">
+        <label for="choice4">Sugar</label><br>
+        <input type="checkbox" id = "choice5">
+        <label for="choice5">Scallions/Spring Onions</label><br>
+        <input type="checkbox" id = "choice6">
+        <label for="choice6">Ginger</label><br>
+        <input type="checkbox" id = "choice7">
+        <label for="choice7">Garlic</label><br>
+        <input type="checkbox" id = "choice8">
+        <label for="choice8">Salt & Pepper</label><br>
+
+        <!-- Instructions for the cooking process -->
+        <h3>Now What do we do?</h3>
+            <ol>
+                <li>
+                    Prepare the Teriyaki Sauce:
+                    <ul>
+                        <li>
+                            In a small bowl, combine 1/4 cup of soy sauce, 1/4 cup of mirin (sweet rice wine),
+                            and 2 tablespoons of sugar. For an added depth of flavor, you can include 1 teaspoon of
+                            grated ginger and 1 clove of minced garlic.
+                        </li>
+                        <li>
+                            Whisk the ingredients together until the sugar is fully dissolved. Set the sauce 
+                            aside to allow the flavors to meld.
+                        </li>
+                    </ul> 
+                </li>
+                <li>
+                Cook the Chicken:
+                <ul>
+                    <li>
+                        Heat a tablespoon of vegetable oil in a large skillet or frying pan over medium heat.
+                    </li>
+                    <li>
+                        Pat 4 boneless, skinless chicken thighs or breasts dry with paper towels. This helps the
+                        chicken brown evenly.
+                    </li>
+                    <li>
+                        Add the chicken pieces to the pan. Cook for about 5-7 minutes on each side, or until the 
+                        chicken is golden brown and has developed a nice sear. The chicken should be nearly cooked 
+                        through by this point.
+                    </li>
+                </li>   
+                </ul>
+                <li>
+                    Add the Sauce:
+                    <ul>
+                        <li>
+                            Once the chicken is golden brown, pour the prepared teriyaki sauce over the chicken 
+                            in the pan.
+                        </li>
+                        <li>
+                            Reduce the heat to low and let the sauce simmer. Occasionally flip the chicken to 
+                            ensure it's evenly coated with the sauce.
+                        </li>
+                        <li>
+                            Continue to cook until the sauce thickens and becomes a glossy glaze, about 
+                            5-10 minutes. The chicken should be cooked through and well-coated with the sauce.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Serve:
+                    <ul>
+                        <li>
+                            Remove the chicken from the pan and let it rest for a few minutes before slicing.
+                        </li>
+                        <li>
+                            Serve the teriyaki chicken over a bed of steamed rice.
+                        </li>
+                        <li>
+                            Garnish with a sprinkle of sesame seeds and chopped green onions for an 
+                            extra touch of flavor and presentation.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        <hr>
+        <!-- add a "links" portion for other pages and back to top -->
+        <h4>Links</h4>
+        <a href="#top">Top of Page</a> <br>
+        <a href="./Detailed_Instructions.html">Detailed Instructions</a>
+
+    </div>
+    </body>
+</html>
