@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* font-family: "Kaushan Script", cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* this is how we get a full sized fixed centered background */
+  background: url('../img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* apply default font style at the body
+tag and all children elements will inherit
+it unless we override it with another style
+ further down */
+body {
+  font-family: 'Kaushan Script', cursive;
+}
+
+/* NAVIGATION */
+
+header {
+  width: 80%;
+  padding: 0 10%;
+  height: 50px;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: 10px;
+  /* increase z index to pull items forward */
+  z-index: 10;
+  background-color: gray;
+  /* flexbox properties */
+  /* flexbox container property */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: url('../img/carbon_fibre.png');
+}
+
+header h1 {
+  color: #ccc;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  background-color: rgba(140, 140, 140, 0.1);
+}
+
+nav li {
+  font-size: 18px;
+  height: 50px;
+  line-height: 50px;
+  width: 120px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  /* We always define our transition on the initial style */
+  transition: all 1s;
+}
+
+nav a:hover {
+  /* These properties will animate because of the transition above */
+  background-color: #eee;
+  color: black;
+}
+
+nav a.active {
+  background-color: white;
+  color: red;
+}
+
+/* GALLERY */
+.container {
+  width: 900px;
+  margin: 100px auto;
+  /* when we use inline block
+  to stack things we have to zero out
+  the font size on the container element */
+  font-size: 0;
+}
+
+.polaroid {
+  width: 260px;
+  margin: 20px;
+  display: inline-block;
+  /* WHENEVER YOU WANT A CHILD ELEMENT TO
+  POSITION WITHIN A PARENT ELEMENT, YOU HAVE
+  TO RELATIVE POSITION THE PARENT*/
+  position: relative;
+}
+/*  whenever you style an image, its usually best practice to 
+make the image take up 100% of its parent element and 
+then give the parent a width and height */
+.polaroid img {
+  width: 100%;
+  height: auto;
+  /* border shorthand is 1- width, style, color */
+  border: 10px solid #ccc;
+  border-bottom-width: 45px;
+}
+
+.polaroid p {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 14px;
+  width: 280px;
+  text-align: center;
+  color: #333;
+}
+
+/* TRANSFORMS */
+.scaleUp {
+  transform: scale(1.5);
+  z-index: 10;
+  transition: all 5s ease-in-out;
+}
+
+.scaleUp:hover{
+  transform: scale(1);
+  transition: all 5s ease-in-out;
+}
+
+.scaleX {
+  /* transform: scaleX(2); */
+  z-index: 10;
+  transform: scale(2, 1);
+  transition: all 5s ease-in-out;
+}
+
+.scaleX:hover{
+  transform: scale(1,1);
+  transition: all 5s ease-in-out;
+}
+
+.scaleY {
+  transform: scale(1, 2);
+  transition: all 5s ease-in-out;
+}
+
+.scaleY:hover{
+  transform: scale(2,1);
+}
+
+.skewX {
+  transform: skewX(-20deg);
+  transition: all 5s ease-in-out;
+}
+
+.skewX:hover{
+  transform: skew(20deg);
+}
+
+.skewY {
+  transform: skewY(-20deg);
+  transition: all 5s ease-in-out;
+}
+
+.skewY:hover{
+  transform: skewY(20deg);
+}
+
+.skewBoth {
+  transform: skew(10deg, 30deg);
+  transition: all 5s ease-in-out;
+}
+
+.skewBoth:hover{
+  transform: skew(-10deg, -30deg);
+}
+
+.rotX {
+  transform: rotateX(180deg);
+  transition: all 5s ease-in-out;
+}
+
+.rotX:hover{
+  transform: rotateX(-180deg);
+}
+
+.rotY {
+  transform: rotateY(180deg);
+  transition: all 5s ease-in-out;
+}
+
+.rotY:hover{
+  transform: rotateY(-180deg)
+}
+
+.rotZ {
+  transform: rotateZ(120deg);
+  transition: all 5s ease-in-out;
+}
+
+.rotZ:hover {
+  transform: rotateZ(-120deg);
+}
+
+.rotateLeft {
+  transform: rotate(-20deg);
+  transition: all 5s ease-in-out;
+}
+
+.rotateLeft:hover {
+  transform: rotate(20deg);
+  cursor: pointer;
+}
+
+.skewHover {
+  transform: skewX(-30deg);
+  transition: all 5s ease;
+}
+
+.skewHover:hover {
+  transform: skewX(30deg);
+}
+
+.scaleHover {
+  transform: scale(0.5);
+  transition: all 5s ease-in;
+}
+
+.scaleHover:hover {
+  transform: scale(1.5);
+}
+
+.colorSwap {
+  filter: grayscale(100%);
+  transition: all 2s ease-out;
+}
+
+.colorSwap:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
