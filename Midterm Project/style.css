@@ -15,9 +15,11 @@ body
 
 h1 
 {
-    padding-bottom: 100px;
-    color: #444;
+    padding-bottom: 50px;
+    color: black;
     text-align: center;
+    font-family:Helvetica;
+    font-size: 2.5rem;
 }
 
 p 
@@ -25,35 +27,67 @@ p
     margin: 0;
     display: flex;
     text-align: center;
+    padding: 20px;
 }
 
 .imagecontainer 
 {
-    flex-grow: 1;
     display: flex;
-    justify-content: center;  /* Horizontally center */
-    align-items: center;      /* Vertically center */
+    justify-content: center;  
+    align-items: center;    
+    margin: 20px 0;
 }
 
 .imageplaceholder
 {
-    width: 300px;  /* Width of the placeholder */
-    height: 200px; /* Height of the placeholder */
-    background-color: #e0e0e0;  /* Light gray background */
-    border: 2px dashed #ccc;  /* Dashed border to represent a placeholder */
+    width: 80%; 
+    max-width: 300px;  
+    height: auto; 
+    aspect-ratio: 3/2;
+    background-color: #e0e0e0;  
+    border: 2px dashed #ccc;  
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
     color: #888;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .textcontainer
 {
-    padding: 200px;
+    padding: 20px;
     padding-top: 50px;
+    max-width: 90%;
+    margin: 0 auto;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) { /* Tablet */
+    h1 {
+        font-size: 2rem;
+    }
+    .textcontainer {
+        padding: 10px;
+    }
+    .imageplaceholder {
+        max-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 480px) { /* Mobile */
+    h1 {
+        font-size: 1.5rem;
+    }
+    .imageplaceholder {
+        max-width: 200px;
+    }
+    .textcontainer {
+        padding: 10px;
+    }
+    p {
+        font-size: 0.9rem;
+    }
 }
 
 

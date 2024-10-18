@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DATA TYPES</title>
+    <script type = "text/javascript"> 
+    //declare variables ,same as C++, can declare and define at the same time 
+    var myVar 
+    //assign value to the variable
+    myVar = 'number' 
+    //declare and define at the same time
+    var myVar2 = 15
+    console.log(myVar)
+    console.log(myVar2)
+    //console.log = print to JS console
+    console.log("type of myVar is a " + typeof myVar)
+    console.log("type of myVar2 is a " + typeof myVar2)
+
+    console.log(myVar + myVar2)
+    var message = 'Hello'
+    var recipient = 'World'
+    //concatenation of strings like Python
+    console.log(message + recipient)
+    //IMPORTANT: JS is a loosely typed language, so it will let you do anything like concatenate a string and a number
+    //const is just like python, but it HAS to be declared and defined at the same time
+    const unchanged = 10 
+    //let i
+    const isOn = true
+    let conditionalmessage 
+    if (isOn == true)
+    {
+        conditionalmessage = 'The light is on'
+    }
+    else
+    {
+        conditionalmessage = 'The light is off'
+    }
+    //alert will give a pop up message with a ok button
+    alert(conditionalmessage)
+    //fstrings in JS
+    const myNum = 80 
+    //backticks are used for fstrings
+    //can do math in the curly braces
+    const anotherMessage = `The number is ${myNum}`
+    </script>
+<head> 
+    <body></body>
+</html>
