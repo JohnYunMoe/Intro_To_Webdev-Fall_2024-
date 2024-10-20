@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech ShowCase</title>
+    <!-- Link to box icons as a font -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel = "stylesheet" href = "./style.css">
 </head>
 <body>
-    <h1 id = "Top"> Tech ShowCase.</h1>
+    <!-- SIDEBAR -->
+    <div class = "sidebar" id = "mysidebar">
+        <div class = "top">
+            <div class = "logo">
+                <i class='bx bxl-tumblr'></i>
+                <span> tech Showcase. </span>
+            </div>
+            <button onclick="closesidebar()" class = "btnin"> <i class='bx bx-menu'></i> </button>
+        </div>
+        <ul>
+            <li> 
+                <a href = "#Top">
+                    <i class='bx bx-grid-alt'></i>
+                    <span> Home </span>
+                </a>
+            </li>
+            <li>
+                <a href = "#Products">
+                    <i class='bx bxs-shopping-bag'></i>
+                    <span> Products </span>
+                </a>
+            </li>
+            <li>
+                <a href = "#Services">
+                    <i class='bx bxs-message-dots'></i>
+                    <span> Services </span>
+                </a>
+            </li>
+            <li>
+                <a href = "#Contact">
+                    <i class='bx bxs-phone'></i>
+                    <span> Contact </span>
+                </a>
+            </li>
+            <li>
+                <a href = "#About">
+                    <i class='bx bxs-book-content'></i>
+                    <span> About </span>
+                </a>
+            </li>
+            <li>        
+                <a href = "#FAQ">
+                    <i class='bx bxs-user-voice'></i>
+                    <span> FAQ </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- SIDEBAR -->
+
+    <!-- MAIN CONTENT -->
+<div class = "Phone">
+    <div class = "navbutton">
+        <button onclick="opensidebar()" class = "btnout"> <i class='bx bx-menu'></i> </button>
+    </div>
     <div class = "imagecontainer">
     <div class = "imageplaceholder"></div>
     </div>
@@ -19,5 +75,25 @@
         metus vivamus curae class et vehicula. Tempor nullam et aenean; est nostra ipsum.
     </p>
     </div>
+</div>
+    <!-- MAIN CONTENT -->
+
+    <!-- SCRIPTS -->
+    <script>
+    function opensidebar()
+    {
+        // document.getElementById('mysidebar').style.display = 'block';
+        // document.getElementById('mysidebar').style.width = '10%';
+        const sidebar = document.getElementById('mysidebar'); 
+        sidebar.classList.remove('hidden');
+    }
+    function closesidebar()
+    {
+        const sidebar = document.getElementById('mysidebar'); 
+        sidebar.classList.toggle('hidden');
+    }
+    </script>
 </body>
+
+
 </html>

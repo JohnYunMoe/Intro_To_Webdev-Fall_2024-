@@ -1,18 +1,18 @@
 * 
 {
     box-sizing: border-box; /* Ensures padding and border are included in total width/height */
+    margin: 0;
+    padding: 0;
 }
 
 body 
 {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.5em;
+    background-color: white; 
 }
-
+/* TEXT RELATED */
 h1 
 {
     padding-bottom: 50px;
@@ -30,6 +30,17 @@ p
     padding: 20px;
 }
 
+.textcontainer
+{
+    padding: 20px;
+    padding-top: 50px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+/* TEXT RELATED */
+
+/* IMAGE RELATED */
 .imagecontainer 
 {
     display: flex;
@@ -53,17 +64,113 @@ p
     color: #888;
     font-size: 1rem;
 }
+/* IMAGE RELATED */
 
-.textcontainer
+/* SIDEBAR RELATED */
+.sidebar 
 {
-    padding: 20px;
-    padding-top: 50px;
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: block;
+    width: 15%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding-top: 0.4rem ; 
+    padding-bottom: 0.8rem;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
-@media only screen and (max-width: 768px) { /* Tablet */
+.top
+{
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    opacity: 1;
+}
+
+.sidebar.hidden
+{
+    display:none;
+}
+
+.sidebar ul
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar ul li 
+{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    opacity: 1;
+}
+
+.sidebar ul li a
+{
+    font-family: Helvetica;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover
+{
+    text-decoration: underline;
+}
+
+.btnout
+{ 
+    top: 0;
+    background:none;
+    color: whitesmoke;
+    border: none;
+    font-size:xx-large;
+    border: none;
+    border-radius: 30%; 
+    border-left: 20%;  
+}
+
+.btnout:hover
+{
+    background-color:(0, 0, 0, 0.82);
+    color: whitesmoke;  
+    cursor: pointer;    
+    transition: all 0.5s ease-in-out;
+}
+
+
+.btnin
+{
+    position: absolute; 
+    background: none;
+    color: whitesmoke;
+    border: none;
+    font-size:x-large;
+    top: .4rem; 
+    left: 80%;
+    border-radius: 30%; 
+    opacity: 1;
+}
+
+.btnin:hover
+{
+    background-color:grey;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+/* SIDEBAR RELATED */
+
+.Phone
+{
+    background-color: black;
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) 
+{ 
     h1 {
         font-size: 2rem;
     }
@@ -75,17 +182,23 @@ p
     }
 }
 
-@media only screen and (max-width: 480px) { /* Mobile */
-    h1 {
+/* Mobile */
+@media only screen and (max-width: 480px) 
+{ 
+    h1 
+    {
         font-size: 1.5rem;
     }
-    .imageplaceholder {
+    .imageplaceholder 
+    {
         max-width: 200px;
     }
-    .textcontainer {
+    .textcontainer 
+    {
         padding: 10px;
     }
-    p {
+    p 
+    {
         font-size: 0.9rem;
     }
 }
