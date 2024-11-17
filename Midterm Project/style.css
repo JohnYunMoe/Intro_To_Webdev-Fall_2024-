@@ -26,10 +26,11 @@ h1
 
 .buttoncontainer
 {
-    padding: 20px;
-    padding-top: 50px;
-    max-width: 90%;
-    margin: 0 auto;
+    z-index: 1;
+    margin: 20px;
+    bottom: 50px;
+    max-width: 100%;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +64,7 @@ h1
     filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
+    animation: glowing 30s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius:20px;
@@ -110,6 +111,7 @@ h1
     width: 100%;
     max-height: 100%;
     overflow: visible;
+    z-index: 2;
 }
 
 .laptopcontainer
@@ -121,7 +123,6 @@ h1
     width: 100%;
     height: fit-content;
     max-height: 90%;
-    overflow: visible;
 }
 
 #dellxps
