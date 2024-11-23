@@ -14,6 +14,12 @@ body
     background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 /* TEXT RELATED */
 h1 
 {
@@ -98,6 +104,58 @@ h1
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; 
+    padding: 10px 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.price p {
+    margin-bottom: 0;
+    padding: 10px 20px; 
+    font-size: 18px; 
+    font-weight: bold; /
+    text-align: center; 
+}
+
+.discount
+{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.discount input[type="number"]
+{
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.discount button {
+    padding: 10px 20px;
+    background-color: #444343;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.discount button:hover {
+    background-color: #000000;
+    box-shadow: 5px 5px 6px rgba(60, 58, 58, 0.42);
+    transition: 0.3s ease-in-out;
 }
 /* TEXT RELATED */
 

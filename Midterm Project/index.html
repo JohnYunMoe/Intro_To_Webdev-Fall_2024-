@@ -32,6 +32,10 @@
 
     <!-- MAIN CONTENT -->
     <main>
+    <div class = "discount">
+        <input type="number" id="discountInput" placeholder="Enter Discount %">
+        <button onclick="applyDiscount()">Apply Discount</button>
+    </div>
     <div class = "carousel slide" id = "carouselplay" data-bs-wrap = "true">
         <div class = "carousel-inner">
 
@@ -40,6 +44,9 @@
                     <div class = "iphonexcontainer">
                         <img src = "./images/phonex.png" alt = "iphone x" id = "iphonex">
                     </div>
+                    <div class = "price">
+                        <p> Price: $999 </p>
+                    </div>
                 </div>
             </div>
 
@@ -47,6 +54,9 @@
                     <div class = "Laptop">
                         <div class = "laptopcontainer">
                             <img src = "./images/laptop.jpg" alt = "dellxps" id = "dellxps">
+                        </div>
+                        <div class = "price">
+                            <p> Price: $2799 </p>
                         </div>
                     </div>
             </div>
@@ -91,6 +101,19 @@
     {
         const sidebar = document.querySelector('.sidebar');
         sidebar.style.display = 'none';
+    }
+
+    function applyDiscount() 
+    {
+        const discount = parseFloat(document.getElementById('discountInput').value) / 100;
+        const priceDivs = document.querySelectorAll('.price');
+
+        priceDivs.forEach(priceDiv => {
+            const priceText = priceDiv.querySelector('p').textContent;
+            const price = parseFloat(priceText.replace('Price: $', ''));
+            const discountedPrice = price - (price * discount);
+            priceDiv.querySelector('p').textContent = `Price: $${discountedPrice.toFixed(2)}`;
+        })
     }
     </script>
 </body>
