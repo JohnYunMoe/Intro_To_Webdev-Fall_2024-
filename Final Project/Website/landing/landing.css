@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.Content{
+    position: absolute;
+    top: 40%;
+    left: 3%;
+}
+
+.Content ul{
+    display: relative;
+    justify-items: right;
+}
