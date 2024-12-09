@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <div class = "Content">
+        <p>Projects</p>
+    </div>
+    <div class = "Name">
+        <p>John Yun Moe</p>
+    </div>
+    <main id = "pagewrapper">
+        <div class = "page">
+            <div class = "projects">
+                <div class = "projects_listwrap">
+                    <ol class = "projects_list">
+                        <li class = "projects_item">Test</li>
+                        <li class = "projects_item">Test1</li>
+                        <li class = "projects_item">Test2</li>
+                        <li class = "projects_item">Test3</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        const projectlist = document.querySelector(".projects_listwrap");
+
+        gsap.to(projectlist, {
+            scrollTrigger: {
+            trigger: ".projects_listwrap",
+            start: "top top",
+            end: "bottom top",
+            scrub: true, // Smooth scrolling
+            pin: true, // Pin the carousel while scrolling
+            }.
+        })
+    </script>
+</body>
+</html>
