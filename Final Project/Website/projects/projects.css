@@ -1,7 +1,37 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'brush-nature-font';
+    src: url(/fonts/BrushNature-XG4GZ.ttf);
+}
+
+@font-face {
+    font-family: 'gorilaz-two-font';
+    src: url("/fonts/GorilaztwopersonaluseBold-RpLzV.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'krypta-ext-bd-font';
+    src: url("/fonts/KryptapersonaluseExtrabold-L3oVD.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'quartzo-font';
+    src: url("/fonts/QuartzofontpersonaluseBold-WyjdE.otf") format("opentype");
+}
+
+@font-face {
+	font-family: 'Samarata';
+	src: url(/fonts/Samarata.ttf);
+}
+
+@font-face {
+	font-family: 'Dallen';
+	src: url(/fonts/Dallen\ Chicago\ TTF\ Demo.ttf);
 }
 
 body {
@@ -9,41 +39,110 @@ body {
     line-height: 1.6;
 }
 
+#canvas1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+	color:antiquewhite;
+}
+
 .Content{
-    position : absolute;
+    position : fixed;
     top: 3%;
     left: 2%;
+	font-family: 'quartzo-font';
+	font-size: 1.5rem;
+	color:antiquewhite;
 }
+
 
 .Name{
-    position : absolute;
+    position : fixed;
     bottom: 3%;
     left: 2%;
+	font-family: 'quartzo-font';
+	font-size: 1.5rem;
+	transition: ease-in-out 0.3s;
 }
 
-.page{
-    box-sizing: border-box;
+.Name:hover{
+	transform:scale(1.1);
 }
 
-.projects{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-end;
-    height: 100vh;
-    width: 100vw;
-    z-index: 2;
-}
-
-.projects_listwrap{
-    box-sizing: border-box;
-    width: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.projects_scrollable{
+    position: absolute;
+    left: 50%;
+	width: 50%;
+	height: 100vh;
+    color: #000000;
+	overflow: hidden;
+    visibility:hidden; 
 }
 
 .projects_list{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
+
+.projects_list li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 130px;
+	font-size: 4rem;
+	font-family: sans-serif;
+	background-color: rgb(21, 161, 255);
+	position: absolute;
+	top: 0;
+	left: 10%;
+	border-radius: 0.8rem;
+	overflow: hidden;
+}
+
+.projects_list li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+.overlay_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.overlay_text h3 {
+    margin: 0;
+    font-size: 1em;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+
+

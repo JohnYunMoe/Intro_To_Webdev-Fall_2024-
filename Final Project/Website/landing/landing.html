@@ -1,30 +1,22 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <title>Landing</title>
-    <link rel = "stylesheet" href = "landing.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Landing</title>
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
+    <canvas id = "canvas1"></canvas>
     <main>
-        <div id = "background-container">
-            <!-- HAVE THE JS FOR THE INTERACTIVE BACKGROUND HERE -->
-            <div id="particles-js"></div>
-        </div>
-        <div class = "Content">
-            <p>John Yun Moe </p>
+        <div class="Content">
+            <p>John Yun Moe</p>
             <ul>
-                <li><a href = "#">About Me</a></li>
-                <li><a href = "#">Contact</a></li>
-                <li><a href = "#">Projects</a></li>
+                <li><a href="/about/about.html">About Me</a></li>
+                <li><a href="/contact/contact.html">Contact</a></li>
+                <li><a href="/projects/projects.html">Projects</a></li>
             </ul>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS.load('particles-js', 'assets/particles.json', function() {
-        console.log('callback - particles-js config loaded');
-        });
-    </script>
+    <script src = "./landing.js" defer></script>
 </body>
-</html> 
+</html>

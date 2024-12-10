@@ -7,40 +7,103 @@
     <link rel="stylesheet" href="projects.css">
 </head>
 <body>
-    <div class = "Content">
-        <p>Projects</p>
-    </div>
-    <div class = "Name">
-        <p>John Yun Moe</p>
-    </div>
-    <main id = "pagewrapper">
-        <div class = "page">
-            <div class = "projects">
-                <div class = "projects_listwrap">
-                    <ol class = "projects_list">
-                        <li class = "projects_item">Test</li>
-                        <li class = "projects_item">Test1</li>
-                        <li class = "projects_item">Test2</li>
-                        <li class = "projects_item">Test3</li>
-                    </ol>
-                </div>
+    <canvas id = "canvas1"></canvas>
+    <main>
+        <div class = "static-side">
+            <div class = "Content">
+                <p>Projects</p>
+            </div>
+            <div class = "Name">
+                <a href = "/landing/landing.html">John Yun Moe</a>
             </div>
         </div>
-    </main>
+        <div class = "projects_scrollable">
+            <ul class = "projects_list">
+                <li>
+                    <img src = "projectimg/banner-yangon.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>YUGEN</h3>
+                    </div>  
+                </li>
+                <li>
+                    <img src = "projectimg/Geolocation_101_Slide_banner.webp"></img>
+                    <div class="overlay_text">
+                        <h3>Geolocation</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/62_radiohead-1.jpg"></img>
+                </li>
+                <li>
+                    <img src = "projectimg/ol21tnjwh3jokz7ldsff.jpg"></img>
+                </li>
+                <li>
+                    <img src = "projectimg/BigWaveTS.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Big Wave</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/for lovers.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Lamp</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/glass.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Moon</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/ichiko.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Ichiko</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/images.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Movie</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/lamp dream.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Dream</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/lamp.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Lamp</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/lily.jpg"></img>
+                </li>
+                <li>
+                    <img src = "projectimg/rowfg3U5MDSox7RQkD7P8b.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Space</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/s-l1200.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>RadioHead</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src = "projectimg/taxi_driver_by_miangelo_dfq1zs0-pre.jpg"></img>
+                    <div class="overlay_text">
+                        <h3>Taxi</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        const projectlist = document.querySelector(".projects_listwrap");
-
-        gsap.to(projectlist, {
-            scrollTrigger: {
-            trigger: ".projects_listwrap",
-            start: "top top",
-            end: "bottom top",
-            scrub: true, // Smooth scrolling
-            pin: true, // Pin the carousel while scrolling
-            }.
-        })
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="projects.JS" defer></script>
 </body>
 </html>
