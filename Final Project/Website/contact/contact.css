@@ -82,3 +82,38 @@ button:hover {
     background-color: #faebd7;
     color: #8b4513;
 }
+
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .contact-form-container {
+        padding: 12px;
+        width: 85%;
+    }
+
+    input, textarea {
+        padding: 7px;
+    }
+
+    button, .back-button {
+        padding: 7px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+    .contact-form-container {
+        padding: 8px;
+        width: 95%;
+    }
+
+    input, textarea {
+        padding: 5px;
+    }
+
+    button, .back-button {
+        padding: 5px;
+        font-size: 11px;
+    }
+}
