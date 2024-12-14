@@ -1,8 +1,18 @@
-# Intro_To_Webdev-Fall_2024-
+# Intro to Web Development - Fall 2024
 
-This Repo was made to keep track of assignments and projects done for the class Intro_To_Webdev-Fall_2024. 
-Professor Name: Katie Adee 
-Semester: Fall 2024 
-Student Name: John Yun Moe 
+This repository is created to keep track of assignments and projects for the class **Intro to Web Development - Fall 2024**.
 
-Files are laid out in weeks, with their own respective "In Class Exercises" folder and "Homeworks" folder to keep track of homework and in class exercises done for that week. 
+- **Professor Name:** Katie Adee
+- **Semester:** Fall 2024
+- **Student Name:** John Yun Moe
+
+## Folder Structure
+
+Files are organized by weeks, each containing:
+- **In Class Exercises** folder
+- **Homeworks** folder
+
+## Notable Assignments
+
+- **Midterm Project**
+- **Final Project**
