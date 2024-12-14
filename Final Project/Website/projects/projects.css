@@ -46,13 +46,13 @@ body {
     width: 100%;
     height: 100%;
     background-color: black;
-    /* background-image: url("./projectimg/62_radiohead-1.jpg"); */
 }
 
 main {
     display: grid;
     grid-template-columns: 1.5fr 2fr;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -84,31 +84,38 @@ a {
 	transform:scale(1.1);
 }
 
+.hidden_name
+{
+    visibility: hidden;
+    position : fixed;
+    top: 3%;
+    left: 2%;
+    font-family: 'quartzo-font';
+    font-size: 1.5rem;
+    transition: ease-in-out 0.3s;
+}
+
+.hidden_name:hover{
+	transform:scale(1.1);
+}
+
 .projects_scrollable{
     position: absolute;
     left: 50%;
-	/* width: 50%; */
-    min-width: 50%;
+	width: 50%;
 	height: 100%;
     color: #000000;
 	overflow: hidden;
     visibility:hidden; 
 }
 
-@media (max-width: 768px) {
-    .projects_scrollable{
-        width: 70%;
-    }
-}
-
 .projects_list{
-    position: absolute;
+	position: absolute;
 	width: 100%;
 	height: 20%;
 	top: 50%;
-	/* left: 50%; */
-    margin-right: 50%;
-	/* transform: translate(-50%, -50%); */
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .projects_list li {
@@ -153,5 +160,78 @@ a {
 	font-family: 'Times New Roman', Times, serif;
 }
 
+/* MEDIA QUERIES */
 
+/* TABLET */
+@media only screen and (min-width: 480px) and (max-width: 767px) 
+{
+    .static-side
+    {
+        display: none;
+    }
+
+    .projects_scrollable
+    {
+        left: 0;
+        width: 100%;
+    }
+
+    .projects_list
+    {
+        left: 0;
+        transform: none;
+    }
+
+    .projects_list li 
+    {
+        left: 0;
+    }
+
+    .hidden_name
+    {
+        visibility: visible;
+    }
+
+    .main
+    {
+        grid-template-columns: 0.1fr 1fr;
+    }
+}
+
+/* PHONE */
+@media only screen and (max-width: 479px) 
+{
+    .static-side
+    {
+        display: none;
+    }
+
+    .projects_scrollable
+    {
+        left: 0;
+        width: 100%;
+    }
+
+    .projects_list
+    {
+        left: 0;
+        transform: none;
+    }
+
+    .projects_list li 
+    {
+        left: 0;
+    }
+
+    .hidden_name
+    {
+        visibility: visible;
+    }
+    
+    .main
+    {
+        grid-template-columns: 0.1fr 1fr;
+    }
+
+}
 
