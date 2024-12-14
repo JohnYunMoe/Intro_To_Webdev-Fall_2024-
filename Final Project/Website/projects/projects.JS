@@ -40,13 +40,6 @@ const trigger = ScrollTrigger.create({
 	end: "+=3000",
 	pin: ".projects_scrollable",
 });
-// converts a progress value (0-1, but could go outside those bounds when wrapping) into a "safe" scroll value that's at least 1 away from the start or end because we reserve those for sensing when the user scrolls ALL the way up or down, to wrap.
-const progressToScroll = progress => gsap.utils.clamp(1, trigger.end - 1, gsap.utils.wrap(0, 1, progress) * trigger.end);
-const wrap = (iterationDelta, scrollTo) => {
-	iteration += iterationDelta;
-	trigger.scroll(scrollTo);
-	trigger.update(); // by default, when we trigger.scroll(), it waits 1 tick to update().
-};
 
 // when the user stops scrolling, snap to the closest item.
 ScrollTrigger.addEventListener("scrollEnd", () => scrollToOffset(scrub.vars.offset));
